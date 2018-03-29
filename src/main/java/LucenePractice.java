@@ -20,7 +20,6 @@ import java.nio.file.Paths;
 
 public class LucenePractice{
     public static void main(String[] args){
-
         try{
             String query = "流量";
 
@@ -44,8 +43,8 @@ public class LucenePractice{
 
             for(ScoreDoc scoreDoc:scoreDocs){
                 Document document = indexSearcher.doc(scoreDoc.doc);
-                System.out.println(scoreDoc.score);
-                System.out.println(document.get("text"));
+                System.out.println(scoreDoc.score+"------>"+document.get("text"));
+                System.out.println();
             }
         }catch(Exception e){e.printStackTrace();}
     }
